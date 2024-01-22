@@ -1,8 +1,13 @@
 import React from 'react'
+import {Header, Body} from './components'
 
 const App = () => {
   return (
-    <div>App</div>
+ <main className='min-h-full overflow-hidden'>
+  <Header/>
+  <Body/>
+
+ </main>
   )
 }
 

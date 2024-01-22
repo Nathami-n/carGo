@@ -7,3 +7,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+  .hero {
+    @apply flex xl:flex-row flex-col gap-5 relative z-0 max-w-[1440px] mx-auto 
+  }
+  
+  .hero__title {
+    @apply 2xl:text-[72px] sm:text-[64px] text-[50px] font-extrabold
+  }
+
+  .hero__subtitle {
+    @apply text-[27px] text-black-100 mt-5
+  }
+
+  .custom-btn {
+    @apply flex flex-row relative justify-center items-center py-3 px-6 outline-none;
+  }
