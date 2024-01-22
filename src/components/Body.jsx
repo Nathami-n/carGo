@@ -14,7 +14,7 @@ const Body = () => {
         </div>
         <div className='hero__image-container'>
             <div className='hero__image'>
-                <img src="" alt="hero image" className='object-contain'/>
+                <img src="/public/3-2-car-free-download-png.png" alt="hero image" className='object-contain'/>
                 <div className='hero__image-overlay'/>
             </div>
         </div>
