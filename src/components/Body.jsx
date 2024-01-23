@@ -15,7 +15,6 @@ const Body = () => {
         <div className='hero__image-container'>
             <div className='hero__image'>
                 <img src="/public/3-2-car-free-download-png.png" alt="hero image" className='object-contain'/>
-                <div className='hero__image-overlay'/>
             </div>
         </div>
     </section>
