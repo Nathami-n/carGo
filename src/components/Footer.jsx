@@ -1,7 +1,12 @@
 import {Socials} from '../utils/Constants'
 import { IconButton } from "@mui/material"
+import { FetchData } from '../utils/FetchData'
 
 const Footer = () => {
+  const data = FetchData('corolla')
+  .then((cars)=>{
+    console.log(cars)
+  })
   return (
  <footer className='w-full h-[40vh] flex justify-between items-center text-white border-t border-gray-200 mt-7 mx-auto'>
     <div className='border  border-red-400  flex flex-col md:flex-row'> 
