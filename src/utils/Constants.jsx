@@ -7,3 +7,10 @@ export const Socials = [
         logo:<LinkedIn sx={{fontSize:'40px'}}/>,
     }
 ]
+
+export const About = [
+    'Company',
+    'Help',
+    'Community',
+    'Contact Us',
+]
