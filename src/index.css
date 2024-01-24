@@ -33,3 +33,18 @@
   .car__heading {
     @apply text-2xl font-extrabold
   }
+  .searchbar {
+    @apply flex items-center justify-start max-sm:flex-col w-full relative max-sm:gap-4 max-w-3xl;
+  }
+  .searchbar__item {
+    @apply flex-1 max-sm:w-full flex justify-start items-center relative;
+  }
+  .search-manufacturer {
+    @apply flex-1 max-sm:w-full flex justify-start items-center;
+  }
+  .padding-x {
+    @apply px-10
+  }
+  .padding-y {
+    @apply py-10
+  }
