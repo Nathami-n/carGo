@@ -10,8 +10,8 @@ const options = {
       }
 
 }
-export const FetchData = async (model) => {
-    const response = await axios.get(`${BASE_URL}?model=${model}`, options);
+export const FetchData = async (model, signal) => {
+    const response = await axios.get(`${BASE_URL}?model=${model}`, options, {signal});
     const data = response.data;
     return data;
 }
