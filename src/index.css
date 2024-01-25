@@ -48,3 +48,10 @@
   .padding-y {
     @apply py-10
   }
+  .car__container {
+    @apply flex flex-col items-center gap-6 md:grid  md:grid-cols-4 md:gap-x-6 mt-12 w-full
+  }
+
+  .car__card {
+    @apply w-[280px] h-[280px] border border-gray-400 shadow-xl rounded-3xl px-4  hover:scale-105 transition-all cursor-pointer
+    }

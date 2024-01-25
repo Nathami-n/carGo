@@ -1,6 +1,7 @@
-import {Filter,SearchBar} from "./";
-import {useEffect} from 'react'
+import {Filter,SearchBar, CarCard} from "./";
+import {useEffect, useState} from 'react'
 import { FetchData } from "../utils/FetchData";
+
 
 const Cars = () => {
     const [carData, setCarData] = useState([])
@@ -9,13 +10,15 @@ const Cars = () => {
         const signal = controller.signal;
 
         FetchData('corolla', {signal})
+        .then(data=>setCarData(data))
         return () =>{
             controller.abort();
         }
 
     },[])
+    console.log(carData)
   return (
-    <section className="mt-12 padding-x padding-y" id="explore">
+    <section className="mt-12 padding-x padding-y w-full" id="explore">
       <div className="car__heading mb-5">
         <h1>Explore Cars</h1>
       </div>
@@ -28,7 +31,9 @@ const Cars = () => {
      </div>
     <div className = 'car__container'>
 
-
+        {carData.map((car, index)=> {
+            return <CarCard key={index} car = {car}/>
+        })}
     </div>
     </section>
   );

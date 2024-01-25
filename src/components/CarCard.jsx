@@ -1,7 +1,7 @@
 import React from 'react'
-const CarCard = () => {
+const CarCard = ({car:{transmission,drive,fuel_type}}) => {
   return (
-    <div className='car__card'>CarCard</div>
+    <div className='car__card'>hello</div>
   )
 }
 
