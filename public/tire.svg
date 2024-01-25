@@ -1,0 +1,14 @@
+<svg id='Route_Sign_Steering_Wheel_24' width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><rect width='24' height='24' stroke='none' fill='#000000' opacity='0'/>
+
+
+<g transform="matrix(0.83 0 0 0.83 12 12)" >
+<g style="" >
+<g transform="matrix(1 0 0 1 0 0)" >
+<circle style="stroke: rgb(0,0,0); stroke-width: 2; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: round; stroke-miterlimit: 4; fill: none; fill-rule: nonzero; opacity: 1;" cx="0" cy="0" r="8" />
+</g>
+<g transform="matrix(1 0 0 1 0 0)" >
+<path style="stroke: rgb(0,0,0); stroke-width: 2; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: round; stroke-miterlimit: 4; fill: none; fill-rule: nonzero; opacity: 1;" transform=" translate(-12, -12)" d="M 12 0 L 12 24 M 3.515 3.515 L 20.485 20.485 M 0 12 L 24 12 M 3.515 20.485 L 20.485 3.5150000000000006" stroke-linecap="round" />
+</g>
+</g>
+</g>
+</svg>
