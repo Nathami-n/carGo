@@ -1,6 +1,7 @@
 import { ArrowRightAltOutlined } from "@mui/icons-material";
 import { CustomButton, CarInfo } from "./";
 import { useState } from "react";
+import { getCarImageUrl } from "../utils/FetchData";
 const CarCard = ({car}) => {
   const {transmission,drive,fuel_type,make,model} = car
   const [openModal, setOpenModal] = useState(false);
@@ -18,7 +19,7 @@ const CarCard = ({car}) => {
       </div>
       <div className="relative w-full h-40 my-3 ">
         <img
-          src="/car.png"
+          src={getCarImageUrl(car)}
           alt="car image"
           className=" object-contain w-full h-full"
         />

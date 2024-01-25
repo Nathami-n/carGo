@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import { IconButton } from "@mui/material";
 import { CloseFullscreen } from "@mui/icons-material";
 import { Dialog, Transition } from "@headlessui/react";
+import { getCarImageUrl } from "../utils/FetchData";
 const CarInfo = ({ openModal, closeModal, car }) => {
   return (
     <>
@@ -29,7 +30,7 @@ const CarInfo = ({ openModal, closeModal, car }) => {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-80"
               >
-                <Dialog.Panel className="relative w-full max-w-lg max-h-[90vh] overflow-y-auto transform rounded-2xl bg-white shadow-xsl text-left transition-all flex flex-col gap-5">
+                <Dialog.Panel className="relative w-full max-w-lg max-h-[90vh] overflow-y-auto transform rounded-2xl bg-white shadow-xl text-left p-2 transition-all flex flex-col gap-5">
                   <IconButton
                     onClick={closeModal}
                     sx={{
@@ -45,7 +46,7 @@ const CarInfo = ({ openModal, closeModal, car }) => {
                   <div className="flex flex-col flex-1 gap-4">
                     <div className="relative w-full h-40 pattern bg-center rounded-lg">
                       <img
-                        src="/car.png"
+                        src={getCarImageUrl(car)}
                         alt="car image"
                         className=" object-contain w-full h-full"
                       />
@@ -53,7 +54,7 @@ const CarInfo = ({ openModal, closeModal, car }) => {
                     <div className="flex flex-1 w-full gap-4">
                       <div>
                         <img
-                          src="/car.png"
+                          src={getCarImageUrl(car,'29')}
                           alt="car image"
                           className=" object-contain w-full h-full"
                         />
@@ -61,7 +62,7 @@ const CarInfo = ({ openModal, closeModal, car }) => {
 
                       <div>
                         <img
-                          src="/car.png"
+                          src={getCarImageUrl(car,'33')}
                           alt="car image"
                           className=" object-contain w-full h-full"
                         />
@@ -69,7 +70,7 @@ const CarInfo = ({ openModal, closeModal, car }) => {
 
                       <div>
                         <img
-                          src="/car.png"
+                          src={getCarImageUrl(car,'13')}
                           alt="car image"
                           className=" object-contain w-full h-full"
                         />
@@ -77,7 +78,24 @@ const CarInfo = ({ openModal, closeModal, car }) => {
                     </div>
                   </div>
                   <div className="flex flex-1 flex-col gap-2">
-                    <h2 className="text-xl capitalize font-semibold">{car.make} {car.model}</h2>
+                    <h2 className="text-xl capitalize font-semibold">
+                      {car.make} {car.model}
+                    </h2>
+                    <div className="flex mt-3 flex-wrap gap-4">
+                      {Object.entries(car).map(([key, value]) => {
+                        return (
+                          <div
+                            key={key}
+                            className="flex justify-between gap-5 w-full text-right px-5"
+                          >
+                            <p className="text-gray-600 capitalize">
+                              {key.split("_").join(" ")}
+                            </p>
+                            <p className="text-black font-bold">{value}</p>
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
                 </Dialog.Panel>
               </Transition.Child>

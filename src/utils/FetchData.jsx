@@ -15,3 +15,17 @@ export const FetchData = async (model, signal) => {
     const data = response.data;
     return data;
 }
+
+
+export const getCarImageUrl = async (car, angle) => {
+    const url = new URL('https://cdn.imagin.studio/getimage');
+    const {year, make, model} = car;
+    url.searchParams.append('customer', import.meta.env.VITE_IMAGIN_API_KEY);
+    url.searchParams.append('make', make);
+    url.searchParams.append('modelYear', `${year}`);
+    // url.searchParams.append('modelFamily', model.split(' ')[0]);
+    url.searchParams.append('zoomType', 'fullscreen');
+    url.searchParams.append('angle', `${angle}`);
+
+    return `${url}`
+}
