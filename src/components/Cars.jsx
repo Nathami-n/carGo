@@ -4,7 +4,7 @@ import { FetchData } from "../utils/FetchData";
 
 
 const Cars = () => {
-    const [carData, setCarData] = useState([])
+    const [carData, setCarData] = useState([{transmission:'fwd'}])
     useEffect(()=>{
         const controller = new AbortController()
         const signal = controller.signal;

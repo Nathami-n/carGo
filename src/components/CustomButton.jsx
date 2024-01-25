@@ -1,6 +1,7 @@
-import React from 'react'
+import { IconButton } from "@mui/material"
 
-const CustomButton = ({title, containerStyles, handleClick}) => {
+const CustomButton = ({title, containerStyles, handleClick, btnIcon}) => {
+
   return (
     <button
         disabled={false}
@@ -11,6 +12,11 @@ const CustomButton = ({title, containerStyles, handleClick}) => {
             <span className={`flex-1`}>
                 {title}
             </span>
+            <div>
+              <IconButton>
+              {btnIcon && btnIcon}
+              </IconButton>
+            </div>
     </button>
   )
 }

@@ -14,7 +14,7 @@ const Body = () => {
         </div>
         <div className='hero__image-container'>
             <div className='hero__image'>
-                <img src="/car.png" alt="hero image" className='object-contain w-[300px] h-[300px]'/>
+                <img src="/car.png" alt="hero image" className='object-contain w-[800px] h-[800px]'/>
             </div>
         </div>
     </section>
