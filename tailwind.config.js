@@ -24,8 +24,8 @@ export default {
         grey: "#747a88",
       },
       backgroundImage: {
-        'pattern': "url('/pattern.png)",
-        'hero-bg':"url('./public/hero-bg.png')"
+        'pattern': "url('./public/pattern.png)",
+        'hero-bg':"url('/public/hero-bg.png')"
       }
     },
   },

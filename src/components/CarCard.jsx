@@ -1,7 +1,8 @@
 import { ArrowRightAltOutlined } from "@mui/icons-material";
-import { CustomButton } from "./";
+import { CustomButton, CarInfo } from "./";
 import { useState } from "react";
-const CarCard = ({ car: { transmission, drive, fuel_type, make, model } }) => {
+const CarCard = ({car}) => {
+  const {transmission,drive,fuel_type,make,model} = car
   const [openModal, setOpenModal] = useState(false);
   const modalOpen = () => {
     setOpenModal(!openModal);
@@ -58,6 +59,7 @@ const CarCard = ({ car: { transmission, drive, fuel_type, make, model } }) => {
           />
         </div>
       </div>
+      <CarInfo openModal={openModal} car={car} closeModal={()=>setOpenModal(false)}/>
     </div>
   );
 };
