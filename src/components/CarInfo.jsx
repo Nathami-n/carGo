@@ -46,7 +46,7 @@ const CarInfo = ({ openModal, closeModal, car }) => {
                   <div className="flex flex-col flex-1 gap-4">
                     <div className="relative w-full h-40 pattern bg-center rounded-lg">
                       <img
-                        src={getCarImageUrl(car)}
+                        src='/car.png'
                         alt="car image"
                         className=" object-contain w-full h-full"
                       />
@@ -54,7 +54,7 @@ const CarInfo = ({ openModal, closeModal, car }) => {
                     <div className="flex flex-1 w-full gap-4">
                       <div>
                         <img
-                          src={getCarImageUrl(car,'29')}
+                          src='/car.png'
                           alt="car image"
                           className=" object-contain w-full h-full"
                         />
@@ -62,7 +62,7 @@ const CarInfo = ({ openModal, closeModal, car }) => {
 
                       <div>
                         <img
-                          src={getCarImageUrl(car,'33')}
+                          src='/car.png'
                           alt="car image"
                           className=" object-contain w-full h-full"
                         />
@@ -70,7 +70,7 @@ const CarInfo = ({ openModal, closeModal, car }) => {
 
                       <div>
                         <img
-                          src={getCarImageUrl(car,'13')}
+                          src='/car.png'
                           alt="car image"
                           className=" object-contain w-full h-full"
                         />

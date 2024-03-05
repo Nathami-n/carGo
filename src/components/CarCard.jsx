@@ -19,7 +19,7 @@ const CarCard = ({car}) => {
       </div>
       <div className="relative w-full h-40 my-3 ">
         <img
-          src={getCarImageUrl(car)}
+          src='/car.png'
           alt="car image"
           className=" object-contain w-full h-full"
         />
